@@ -28,7 +28,7 @@ project-statistics-and-probability-computing
 |└── template_cisti_2014_pt.docx
 |── src
 |── modules
-|├── \_\_init\_\_.py
+|├── __init__.py
 |├── graphics.py
 |└── measure_centrality.py
 |── notbooks
