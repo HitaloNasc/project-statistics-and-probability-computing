@@ -1,0 +1,38 @@
+GIT WORK FLOW
+
+Apartir da branch main siga os seguintes passos:
+
+1. Para atualizar seu repositório local
+> git pull
+
+2. Para criar uma nova branch de trabalho
+
+Para features
+> git checkout -b feature/<nome-da-atividade>
+
+Para bugfixs
+> git checkout -b bugfix/<nome-da-atividade>
+
+Obs.: Uma branch deve ser responsável por uma única atividade.
+
+Após finalizar as modificações na branch de trabalho faça:
+
+3. Adicione as modificações ao staging
+> git add .
+
+4. Commit as modificações feitas
+> git commit -m '<mesangem-de-commit>'
+
+5. Retorne para branch main
+> git checkout main
+
+6. Atualize o repositório local
+> git pull
+
+7. Faça o merge da branch de trabalho com a main
+> git merge --no-ff feature/<nome-da-atividade>
+
+Obs.: Uma mensagem pode aparecer no console, precione 'ctrl + x' para finalizar o merge
+
+8. Atualize o repositório remoto com as novas modificações
+> git push
