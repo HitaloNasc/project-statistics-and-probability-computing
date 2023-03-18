@@ -65,7 +65,7 @@ def get_coefficient_variation(standard_deviation, mean):
     """
     return standard_deviation / mean
 
-def get_quantiles(data):
+def get_quartiles(data):
     """
     Calcula os 1º, 2º, 3º e 4º quartis
     Arg:
@@ -92,5 +92,5 @@ mode = get_mode(data)
 standard_deviation = get_standard_deviation(data)
 variance = get_variance(data)
 coefficient_variation = get_coefficient_variation(standard_deviation, mean)
-quantiles = get_quantiles(data)
+quartiles = get_quartiles(data)
 curtose = get_kurtosis(data)
