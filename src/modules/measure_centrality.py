@@ -1,15 +1,96 @@
-"""
-This module contains the centrality measures functions
-"""
+"""Esse módulo contém as medidas de centralidade"""
+import statistics
+import numpy as np
+from scipy.stats import kurtosis
+from data import data
 
-# function exemple:
-"""
-Responsability
+def get_mean(data):
+    """
+    Calcula a média dos dados
+    Arg:
+        data: dados formatados.
+    Return:
+        Um número real representando o valor da média.
+    """
+    return statistics.mean(data)
 
-Args:
-    parametro1: O primeiro parâmetro, um número inteiro.
-    parametro2: O segundo parâmetro, um número inteiro.
+def get_median(data):
+    """
+    Calcula a mediana dos dados
+    Arg:
+        data: dados formatados.
+    Return:
+        Um número real representando o valor da mediana.
+    """
+    return statistics.median(data)
 
-Retruns:
-    Um número inteiro representando a soma dos parâmetros.
-"""
+def get_mode(data):
+    """
+    Calcula a moda dos dados
+    Arg:
+        data: dados formatados.
+    Return:
+        Um número real representando o valor da moda.
+    """
+    return statistics.mode(data)
+
+def get_standard_deviation(data):
+    """
+    Calcula o desvio padrão dos dados
+    Arg:
+        data: dados formatados.
+    Return:
+        Um número real representando o valor do desvio padrão.
+    """
+    return statistics.stdev(data)
+
+def get_variance(data):
+    """
+    Calcula a variância dos dados
+    Arg:
+        data: dados formatados.
+    Return:
+        Um número real representando o valor da variância.
+    """
+    return statistics.variance(data)
+
+def get_coefficient_variation(standard_deviation, mean):
+    """
+    Calcula o coeficiente de variação dos dados
+    Arg:
+        standard_deviation: desvio padrão dos dados.
+        mean: média dos dados.
+    Return:
+        Um número real representando o coeficiente de variação.
+    """
+    return standard_deviation / mean
+
+def get_quantiles(data):
+    """
+    Calcula os 1º, 2º, 3º e 4º quartis
+    Arg:
+        data: dados formatados.
+    Return:
+        Um lista com os valores dos 1º, 2º, 3º e 4º quartis, respectivamente.
+    """
+    return np.percentile(data, [25, 50, 75, 100])
+
+def get_kurtosis(data):
+    """
+    Calcula a curtose dos dados
+    Arg:
+        data: dados formatados.
+    Return:
+        Um número real representando o valor da curtose.
+    """
+    return kurtosis(data)
+
+
+mean = get_mean(data)
+median = get_median(data)
+mode = get_mode(data)
+standard_deviation = get_standard_deviation(data)
+variance = get_variance(data)
+coefficient_variation = get_coefficient_variation(standard_deviation, mean)
+quantiles = get_quantiles(data)
+curtose = get_kurtosis(data)
