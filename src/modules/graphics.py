@@ -1,15 +1,11 @@
-"""
-This module contains generation functions for graphs
-"""
+import matplotlib.pyplot as plt 
 
-# function exemple:
-"""
-Responsability
-
-Args:
-    parametro1: O primeiro parâmetro, um número inteiro.
-    parametro2: O segundo parâmetro, um número inteiro.
-
-Retruns:
-    Um número inteiro representando a soma dos parâmetros.
-"""
+def get_boxplot(data):
+    """
+    Cria o gráfico boxplot
+    Arg: 
+        data: Dados formatados
+    Return:
+        Criação gráfica do boxplot a partir dos dados inseridos
+    """
+    return plt.boxplot(data)
