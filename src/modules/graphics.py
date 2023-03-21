@@ -1,3 +1,5 @@
+"""Esse módulo contém as representações gráficas dos dados"""
+
 import matplotlib.pyplot as plt 
 
 def get_boxplot(data):
