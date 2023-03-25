@@ -22,3 +22,16 @@ def get_histograma(data):
         Criação gráfica em histograma a partir dos dados inseridos
     """
     return plt.hist(data)
+
+def get_linechart(data):
+    """
+    Cria o gráfico de linha
+    Arg:
+        data: Dados formatados
+    Return:
+        Criação gráfica do gráfico de linha a partir dos dados inseridos
+    """
+    x = []
+    for i in range(len(data)):
+        x.append(i*5)
+    return plt.plot(x, data, linewidth=0.9)
