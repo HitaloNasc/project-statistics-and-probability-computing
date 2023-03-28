@@ -1,11 +1,10 @@
 """
-Esse módulo contém as medidas de centralidade
+Esse módulo contém as medidas de centralidade e de dispersão
 """
 
 import statistics
 import numpy as np
 from scipy.stats import kurtosis
-from data import data
 
 
 def get_mean(data):
