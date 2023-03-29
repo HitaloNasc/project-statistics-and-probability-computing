@@ -1,13 +1,13 @@
 
-def valor_min(data):
+def valor_max(data):
     """
-    Cria o gráfico boxplot
+    Calcular o valor máximo dos dados
     Arg: 
         data: Dados formatados
     Return:
-        Criação gráfica do boxplot a partir dos dados inseridos
+        valor máximo dos dados
     """
-    return min(data)
+    return max(data)
 
 
 def valor_min(data):
