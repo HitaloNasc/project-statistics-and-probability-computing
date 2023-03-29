@@ -1,3 +1,4 @@
 NumPy
 SciPy
 Matplotlib
+Seaborn
