@@ -1,6 +1,7 @@
 """Esse módulo contém as representações gráficas dos dados"""
 
 import matplotlib.pyplot as plt 
+import seaborn as sns
 
 def get_boxplot(data):
     """
@@ -21,7 +22,8 @@ def get_histograma(data):
     Return:
         Criação gráfica em histograma a partir dos dados inseridos
     """
-    return plt.hist(data)
+    sns.histplot(data, kde=True)
+    return plt.show()
 
 def get_linechart(data):
     """
