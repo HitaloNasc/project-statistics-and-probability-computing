@@ -1,8 +1,11 @@
-"""Esse módulo contém as medidas de centralidade"""
+"""
+Esse módulo contém as medidas de centralidade e de dispersão
+"""
+
 import statistics
 import numpy as np
 from scipy.stats import kurtosis
-from data import data
+
 
 def get_mean(data):
     """
@@ -14,6 +17,7 @@ def get_mean(data):
     """
     return statistics.mean(data)
 
+
 def get_median(data):
     """
     Calcula a mediana dos dados
@@ -23,6 +27,7 @@ def get_median(data):
         Um número real representando o valor da mediana.
     """
     return statistics.median(data)
+
 
 def get_mode(data):
     """
@@ -34,6 +39,7 @@ def get_mode(data):
     """
     return statistics.mode(data)
 
+
 def get_standard_deviation(data):
     """
     Calcula o desvio padrão dos dados
@@ -44,6 +50,7 @@ def get_standard_deviation(data):
     """
     return statistics.stdev(data)
 
+
 def get_variance(data):
     """
     Calcula a variância dos dados
@@ -53,6 +60,7 @@ def get_variance(data):
         Um número real representando o valor da variância.
     """
     return statistics.variance(data)
+
 
 def get_coefficient_variation(standard_deviation, mean):
     """
@@ -65,6 +73,7 @@ def get_coefficient_variation(standard_deviation, mean):
     """
     return standard_deviation / mean
 
+
 def get_quartiles(data):
     """
     Calcula os 1º, 2º, 3º e 4º quartis
@@ -75,6 +84,7 @@ def get_quartiles(data):
     """
     return np.percentile(data, [25, 50, 75, 100])
 
+
 def get_kurtosis(data):
     """
     Calcula a curtose dos dados
@@ -84,13 +94,3 @@ def get_kurtosis(data):
         Um número real representando o valor da curtose.
     """
     return kurtosis(data)
-
-
-mean = get_mean(data)
-median = get_median(data)
-mode = get_mode(data)
-standard_deviation = get_standard_deviation(data)
-variance = get_variance(data)
-coefficient_variation = get_coefficient_variation(standard_deviation, mean)
-quartiles = get_quartiles(data)
-curtose = get_kurtosis(data)
