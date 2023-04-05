@@ -33,6 +33,6 @@ def qq_plot(data):
     # Definir título e rótulos dos eixos
     ax.set_title("Q-Q plot dos dados")
     ax.set_xlabel("Quantis teóricos")
-    ax.set_ylabel("Quantis amostrais")
+    ax.set_ylabel("Uso de CPU (%)")
 
     return plt.show()
