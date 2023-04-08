@@ -44,7 +44,7 @@ def get_linechart(data):
     for i in range(len(data)):
         x.append(i*5)
     plt.plot(x, data, linewidth=0.9)
-    plt.title("Uso de CPU (%) no Gráfico de linha")
-    plt.xlabel('Uso de CPU (%)')
+    plt.title("Gráfico temporal do Desempenho da CPU")
+    plt.xlabel('Tempo (s)')
     plt.ylabel('Uso de CPU (%)')
     return plt.show()
